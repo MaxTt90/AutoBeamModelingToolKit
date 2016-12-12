@@ -27,13 +27,19 @@ namepat = re.compile(r"(AB|GT|Z|DGBTA)(_)(\d+mv)(\d+.\d+x\d+.\d+)(.\d+)")
 
 #measured_data = MeasuredData('AB_06mv50.00x50.00.1015')
 
-path = r'C:\Users\cnshayit\Desktop\innovation_python\!!!MC Data Library\Final.new.Validate\Measured'
+path = r'C:\AutoBeamModelingToolKit\TestFile\Measured'
 
 measuredDataSetProvider = MeasuredDataSetProvider(path, namepat)
 bResult = measuredDataSetProvider.getAllMeasuredDataInDir()
 measuredDataSet = measuredDataSetProvider.measuredDataSet
 
 Dper = MAT.extractPddPercentages(measuredDataSet[-1])
+shiftPos = MAT.getProfileShift(measuredDataSet[0])
+fieldWidth = MAT.getFieldWidth(measuredDataSet[0])
+widthError = MAT.getWidthError(measuredDataSet[0])
+flatness = MAT.getFlatness(measuredDataSet[0])
+symetry = MAT.getSymmetry(measuredDataSet[0])
+penumbra = MAT.getPenumbra(measuredDataSet[0])
 
 
 
