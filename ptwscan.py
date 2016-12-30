@@ -5,6 +5,7 @@ Class for ptw scan
 import sys
 from ptwdatapoint import PtwDataPoint
 
+
 class PtwScan(object):
     
     def __init__(self, fileObject):

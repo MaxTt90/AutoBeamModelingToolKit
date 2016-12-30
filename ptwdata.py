@@ -6,6 +6,7 @@ import sys
 
 from ptwscan import PtwScan
 
+
 class PtwData(object):
 
     def __init__(self, path):

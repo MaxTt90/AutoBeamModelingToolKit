@@ -3,6 +3,7 @@
 Class for PTW data point
 """
 
+
 class PtwDataPoint:
     
     def __init__(self, position, measurement, referenceMeasurement = None):

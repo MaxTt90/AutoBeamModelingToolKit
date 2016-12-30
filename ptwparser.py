@@ -35,11 +35,11 @@ measuredDataSet = measuredDataSetProvider.measuredDataSet
 
 Dper = MAT.extractPddPercentages(measuredDataSet[-1])
 shiftPos = MAT.getProfileShift(measuredDataSet[0])
-fieldWidth = MAT.getFieldWidth(measuredDataSet[0])
-widthError = MAT.getWidthError(measuredDataSet[0])
-flatness = MAT.getFlatness(measuredDataSet[0])
-symetry = MAT.getSymmetry(measuredDataSet[0])
-penumbra = MAT.getPenumbra(measuredDataSet[0])
+fieldWidth = MAT.getProfileFieldWidth(measuredDataSet[0])
+widthError = MAT.getProfileWidthError(measuredDataSet[0])
+flatness = MAT.getProfileFlatness(measuredDataSet[0])
+symetry = MAT.getProfileSymmetry(measuredDataSet[0])
+penumbra = MAT.getProfilePenumbra(measuredDataSet[0])
 
 
 
