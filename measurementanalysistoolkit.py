@@ -39,7 +39,7 @@ class MeasurementAnalysisToolkit(object):
         else: 
             return 0.5 * (couplePos[0] + couplePos[1])
             
-    def getFieldWidth(profileMeasuredData):
+    def getProfileFieldWidth(profileMeasuredData):
         '''Description: Get field width
             
             Arguments: Profile measured data
@@ -52,14 +52,14 @@ class MeasurementAnalysisToolkit(object):
         else:
             return (couplePos[1] - couplePos[0])
     
-    def getWidthError(profileMeasuredData):
+    def getProfileWidthError(profileMeasuredData):
         '''Description: Get width error
             
             Arguments: Profile measured data
             
             Return: Width error.            
         '''
-        fieldWidth = MeasurementAnalysisToolkit.getFieldWidth(profileMeasuredData)
+        fieldWidth = MeasurementAnalysisToolkit.getProfileFieldWidth(profileMeasuredData)
         fieldSizeX = profileMeasuredData.fieldSize[0] / 10.0 #Unit Transform
         fieldSizeY = profileMeasuredData.fieldSize[1] / 10.0 
         
@@ -72,7 +72,7 @@ class MeasurementAnalysisToolkit(object):
         else:
             raise ValueError('Measured data orientation type should be AB, GT, DGBTA.')
                                           
-    def getFlatness(profileMeasuredData):
+    def getProfileFlatness(profileMeasuredData):
         '''Description: Get flatness
             
             Arguments: Profile measured data
@@ -92,7 +92,7 @@ class MeasurementAnalysisToolkit(object):
         
         return (maxVal - minVal) / zeroVal
     
-    def getSymmetry(profileMeasuredData):
+    def getProfileSymmetry(profileMeasuredData):
         '''Description: Get symmetry
             
             Arguments: Profile measured data
@@ -116,7 +116,7 @@ class MeasurementAnalysisToolkit(object):
             if flatMax < flat:
                 flatMax = flat
     
-    def getPenumbra(profileMeasuredData):
+    def getProfilePenumbra(profileMeasuredData):
         '''Description: Get penumbra
             
             Arguments: Profile measured data
